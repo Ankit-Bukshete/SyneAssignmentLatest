@@ -4,21 +4,18 @@ package stepdefinitions;
 import com.pages.AdminPage;
 import com.pages.LoginPage;
 import com.qa.factory.DriverFactory;
-import com.qa.util.ConfigReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.log4testng.Logger;
 
 import java.awt.*;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.LogManager;
 
 
-public class AdminStepDef {
+public class AdminStepDefs {
 
-    private static final Logger LOGGER = Logger.getLogger(AdminStepDef.class.getName().getClass());
+    private static final Logger LOGGER = Logger.getLogger(AdminStepDefs.class.getName().getClass());
 
     private LoginPage loginPage;
     private AdminPage adminPage;
@@ -26,7 +23,7 @@ public class AdminStepDef {
 //    public static Properties config;
 
 
-    public AdminStepDef(){
+    public AdminStepDefs(){
         loginPage = new LoginPage(DriverFactory.getDriver());
         DriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
